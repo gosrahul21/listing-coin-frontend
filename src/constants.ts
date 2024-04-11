@@ -1,0 +1,1 @@
+export const KIGENTECH_LOGO = '/kigentech-logo.png'

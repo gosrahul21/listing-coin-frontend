@@ -1,0 +1,102 @@
+[
+    {
+        "accountId": "17852",
+        "username": "Connor Booth",
+        "firstName": "Connor",
+        "accountType": "Producer",
+        "lastName": "Connor",
+        "email": "conor@gmail.com",
+        "city": "Hudsonville",
+        "country": "United States",
+        "companyDetails": {
+            "companyName": "Xerox LLt",
+            "country": "United States",
+            "city": "Hudsonville",
+            "zipCode": "49426",
+            "registration": "United States",
+            "street": "3451 Kelly St",
+            "phone": "(616) 669-9225",
+            "state": "Michigan"
+        }
+    },
+    {
+        "accountId": "55123",
+        "username": "charlie_Baker",
+        "firstName": "Charlie",
+        "accountType": "Producer",
+        "lastName": "Baker",
+        "email": "charlie@gmail.com",
+        "city": "Sacramento",
+        "country": "United States",
+        "companyDetails": {
+            "companyName": "Baker's Company",
+            "country": "United States",
+            "city": "Sacramento",
+            "zipCode": "95814",
+            "registration": "United States",
+            "street": "123 Main St",
+            "phone": "(916) 555-1234",
+            "state": "California"
+        }
+    },
+    {
+        "accountId": "7403",
+        "username": "kayden_richards",
+        "firstName": "Kayden",
+        "accountType": "Producer",
+        "lastName": "Richards",
+        "email": "kayden@gmail.com",
+        "city": "Chandler",
+        "country": "United States",
+        "companyDetails": {
+            "companyName": "Richards & Co.",
+            "country": "United States",
+            "city": "Chandler",
+            "zipCode": "85224",
+            "registration": "United States",
+            "street": "456 Oak Ave",
+            "phone": "(480) 555-5678",
+            "state": "Arizona"
+        }
+    },
+    {
+        "accountId": "96542",
+        "username": "max_stone",
+        "firstName": "Max",
+        "accountType": "Producer",
+        "lastName": "Stone",
+        "email": "max@gmail.com",
+        "city": "El Paso",
+        "country": "United States",
+        "companyDetails": {
+            "companyName": "Stone Manufacturing",
+            "country": "United States",
+            "city": "El Paso",
+            "zipCode": "79936",
+            "registration": "United States",
+            "street": "789 Maple St",
+            "phone": "(915) 555-7890",
+            "state": "Texas"
+        }
+    },
+    {
+        "accountId": "14350",
+        "username": "ross_hughes",
+        "firstName": "Ross",
+        "accountType": "Producer",
+        "lastName": "Hughes",
+        "email": "ross@gmail.com",
+        "city": "El Paso",
+        "country": "United States",
+        "companyDetails": {
+            "companyName": "Hughes Enterprises",
+            "country": "United States",
+            "city": "El Paso",
+            "zipCode": "79912",
+            "registration": "United States",
+            "street": "567 Pine St",
+            "phone": "(915) 555-5678",
+            "state": "Texas"
+        }
+    }
+]

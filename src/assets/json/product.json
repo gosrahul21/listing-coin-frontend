@@ -1,0 +1,102 @@
+[
+    {
+        "producer": "Baker",
+        "productCode": "B-XXXX",
+        "name": "Hydrogen",
+        "type": "Green",
+        "availableQuantity": "100kg",
+        "viewOnChain": "https://mumbai.polygonscan.com/tx/0x2cdbdd2d89d1d725ac26fe76605a08c8d36d4e8f44ddb254f5764ebc853308e4",
+        "productDetails": {
+            "name": "Hydrogen",
+            "sourceOfEnergy": "Hydro",
+            "locationOfProduction": "Brussels, Belgium",
+            "transportation": "Land",
+            "storageTime": "12th August, 2023 to 10th Oct, 2023",
+            "producer": "max_stone",
+            "remainingQty": "220 KG",
+            "availableQty": "220 KG",
+            "productionMethod": "Steam Methane Reforming (SMR)",
+            "productionDateTime": "12th August, 2023 12:15 pm"
+        }
+    },
+    {
+        "producer": "GreenTech",
+        "productCode": "G-ZZZZ",
+        "name": "Hydrogen",
+        "type": "Gray",
+        "availableQuantity": "80kg",
+        "viewOnChain": "https://mumbai.polygonscan.com/tx/0x2cdbdd2d89d1d725ac26fe76605a08c8d36d4e8f44ddb254f5764ebc853308e4",
+        "productDetails": {
+            "name": "Hydrogen",
+            "sourceOfEnergy": "Natural Gas",
+            "locationOfProduction": "Berlin, Germany",
+            "transportation": "Sea",
+            "storageTime": "20th October, 2023 to 15th Dec, 2023",
+            "producer": "eco_green",
+            "remainingQty": "120 KG",
+            "availableQty": "120 KG",
+            "productionMethod": "Oxidative Coupling of Methane (OCM)",
+            "productionDateTime": "20th October, 2023 3:45 pm"
+        }
+    },
+    {
+        "producer": "BlueEnergy",
+        "productCode": "BE-ABCD",
+        "name": "Hydrogen",
+        "type": "Blue",
+        "availableQuantity": "150kg",
+        "viewOnChain": "https://mumbai.polygonscan.com/tx/0x2cdbdd2d89d1d725ac26fe76605a08c8d36d4e8f44ddb254f5764ebc853308e4",
+        "productDetails": {
+            "name": "Hydrogen",
+            "sourceOfEnergy": "Water",
+            "locationOfProduction": "Paris, France",
+            "transportation": "Air",
+            "storageTime": "15th September, 2023 to 5th Nov, 2023",
+            "producer": "blue_energy",
+            "remainingQty": "180 KG",
+            "availableQty": "180 KG",
+            "productionMethod": "Electrolysis",
+            "productionDateTime": "15th September, 2023 2:30 pm"
+        }
+    },
+    {
+        "producer": "EcoProducers",
+        "productCode": "EP-WXYZ",
+        "name": "Hydrogen",
+        "type": "Green",
+        "availableQuantity": "120kg",
+        "viewOnChain": "https://mumbai.polygonscan.com/tx/0x2cdbdd2d89d1d725ac26fe76605a08c8d36d4e8f44ddb254f5764ebc853308e4",
+        "productDetails": {
+            "name": "Hydrogen",
+            "sourceOfEnergy": "Wind",
+            "locationOfProduction": "Copenhagen, Denmark",
+            "transportation": "Rail",
+            "storageTime": "5th November, 2023 to 25th Dec, 2023",
+            "producer": "eco_pro",
+            "remainingQty": "90 KG",
+            "availableQty": "90 KG",
+            "productionMethod": "Renewable Electrolysis",
+            "productionDateTime": "5th November, 2023 4:00 pm"
+        }
+    },
+    {
+        "producer": "SunTech",
+        "productCode": "ST-PQRS",
+        "name": "Hydrogen",
+        "type": "Gray",
+        "availableQuantity": "200kg",
+        "viewOnChain": "https://mumbai.polygonscan.com/tx/0x2cdbdd2d89d1d725ac26fe76605a08c8d36d4e8f44ddb254f5764ebc853308e4",
+        "productDetails": {
+            "name": "Hydrogen",
+            "sourceOfEnergy": "Solar",
+            "locationOfProduction": "Los Angeles, USA",
+            "transportation": "Ship",
+            "storageTime": "10th December, 2023 to 31st Jan, 2024",
+            "producer": "sun_tech",
+            "remainingQty": "150 KG",
+            "availableQty": "150 KG",
+            "productionMethod": "Photovoltaic Electrolysis",
+            "productionDateTime": "10th December, 2023 1:30 pm"
+        }
+    }
+]

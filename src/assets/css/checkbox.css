@@ -1,0 +1,47 @@
+/* checkbox */
+input[type="checkbox"] {
+    /* visibility: hidden; */
+    position: relative;
+    height: 21.2px;
+    width: 21.2px;
+    border-radius: 2px;
+  }
+  input[type="checkbox"]::before {
+    position: absolute;
+    content: "";
+    height: 21.2px;
+    width: 21.2px;
+    background: rgba(153, 153, 153, 0.10);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  input[type="checkbox"]::after {
+    position: absolute;
+    content: "";
+    height: 21.2px;
+    width: 21.2px;
+    background: #335908;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    opacity: 0;
+    background-image: url("../images/check-line.svg");
+    /* background-size: 14px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.1s all;
+    cursor: pointer;
+  }
+  input[type="checkbox"]:checked::after {
+    opacity: 1;
+  }
+  input[type="checkbox"]:disabled {
+    opacity: 0.4;
+  }
+  input[type="checkbox"]:disabled:after {
+    cursor: not-allowed;
+  }
