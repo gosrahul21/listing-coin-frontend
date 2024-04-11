@@ -34,7 +34,7 @@ const User = () => {
   useEffect(() => {
     setInterval(() => {
       fetchTokenPrice();
-    }, 5000)
+    }, 60000)
   }, [])
 
   const fetchTokenPrice = async (tokensData?: any) => {
