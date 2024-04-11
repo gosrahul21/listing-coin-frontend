@@ -11,8 +11,8 @@ const CustomTable = React.lazy(() => import("../widgets/CustomTable"));
 
 const User = () => {
   const [tokens, setTokens] = useState<any[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [statusLoading, setStatusLoading] = useState(false);
+  const [loading] = useState(false);
+  const [statusLoading,] = useState(false);
   const tokenRef = React.useRef(tokens);
   const navigate = useNavigate()
 

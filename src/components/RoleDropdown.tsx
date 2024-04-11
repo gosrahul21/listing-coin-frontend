@@ -1,29 +1,11 @@
-// export const StyledDropwDownContent = styled.div`
-//     position: absolute ;
-//     top: 100%; 
-//     left:0; 
-//     right:0 ;
-//     z-index: 100;
-//     color: white;
-//     background:${styledconfig.backgroundColor.backgroundStyle2};
-//     div{
-//         padding: 5px 10px;
-//         text-align: center;
-//         background: ${styledconfig.backgroundColor.backgroundStyle2};
-//         &:hover {
-//             background: ${styledconfig.colors.lightgray};
-//         }
-//     }
-// `
-
 import { useEffect, useState } from "react"
 import { UpArrowIcon } from "../widgets/icons/UpArrowIcon";
 import { DownArrowIcon } from "../widgets/icons/DownArrowIcon";
 import userLogo from '../assets/images/user-logo.png'
-import { UserType } from "../types/enums/userType";
 import { capitalizeFirstLetter } from "../utils";
+import { UserType } from "../types/enums/userType";
 
-const RoleDropdown = ({value,  onSelect, items }: { value: {user: any, selectedRole: UserType}, onSelect: (item: string) => void, items: Array<string> }) => {
+const RoleDropdown = ({value,  onSelect, items }: { value: any, onSelect: (item: UserType) => void, items: Array<string> }) => {
     const [open, setOpen] = useState(false);
 
     useEffect(() => {
@@ -50,7 +32,7 @@ const RoleDropdown = ({value,  onSelect, items }: { value: {user: any, selectedR
         {open ? <UpArrowIcon /> : <DownArrowIcon />}
         <div className={`absolute z-10 left-0 right-0 top-[100%] ${open ? 'flex flex-col items-center' : 'hidden'} w-full bg-slate-800 shadow-md  rounded-b-xl `}>
 
-            {items?.map((item, index: number) => (<div onClick={()=>onSelect(item)} className={`text-[#000000] font-lato text-sm text-center hover:bg-slate-800 leading-[16.8px] ${index===items.length-1?'rounded-b-xl ':''} text-gray-100 font-normal py-3 border-[0.5px] w-full border-yellow-600 `}>
+            {items?.map((item, index: number) => (<div onClick={()=>onSelect(item as any)} className={`text-[#000000] font-lato text-sm text-center hover:bg-slate-800 leading-[16.8px] ${index===items.length-1?'rounded-b-xl ':''} text-gray-100 font-normal py-3 border-[0.5px] w-full border-yellow-600 `}>
                 {capitalizeFirstLetter(item)}
             </div>))}
         </div>
