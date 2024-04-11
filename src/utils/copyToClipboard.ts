@@ -1,4 +1,4 @@
-export default async function copyToClipboard(textToCopy: string, onSuccessCb: Function, onErrorCb: Function){
+export default async function copyToClipboard(textToCopy: string, onSuccessCb: any, onErrorCb: any){
     try {
         await window.navigator.clipboard.writeText(textToCopy);
         onSuccessCb && onSuccessCb();

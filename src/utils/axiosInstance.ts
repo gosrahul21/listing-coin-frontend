@@ -23,7 +23,7 @@ export {
 
 export const apiCaller = async <T>(requestType: RequestType, endpoint: string, instance = instance1, data?: any, query?: any, contentType = 'application/json'): Promise<T> => {
   try {
-    let headers: any = { 'Content-Type': contentType };
+    const headers: any = { 'Content-Type': contentType };
     const user = localStorage.getItem('user');
     if (user) {
       headers.Authorization = `Bearer ${JSON.parse(user).accessToken}`

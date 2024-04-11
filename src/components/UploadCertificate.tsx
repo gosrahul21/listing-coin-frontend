@@ -12,8 +12,8 @@ import { toast } from "react-toastify";
 
 const UploadCertificate = (props: {
     productId: string,
-    onCancel: Function,
-    onCertificateUploadComplete: Function
+    onCancel: ()=>void,
+    onCertificateUploadComplete: ()=>void
 }) => {
     const [file, setFile] = useState<any>();
     const uploadDocAndCertify = async () => {

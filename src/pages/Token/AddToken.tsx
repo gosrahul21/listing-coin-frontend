@@ -7,7 +7,6 @@ import { addToken } from '../../services/tokenService';
 import { toast } from 'react-toastify';
 import { enqueueSnackbar } from 'notistack';
 import { uploadFile } from '../../services/uploadService';
-import { instance1 } from '../../utils/axiosInstance';
 import { useNavigate } from 'react-router-dom';
 
 

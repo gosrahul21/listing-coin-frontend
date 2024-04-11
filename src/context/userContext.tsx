@@ -1,15 +1,15 @@
 import { useEffect, useState, createContext, useContext } from "react";
 import { UserType } from "../types/enums/userType";
-import { decodeToken, isJwtTokenExpired } from "../utils/token";
+import {  isJwtTokenExpired } from "../utils/token";
 import { refreshSession } from "../services/userService";
-import { json, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 interface UserContextType {
     user: { userName: string, email: string, roles: string[], company: any };
     selectedRole: UserType | null | undefined | "logout";
     changeRole: (role: UserType) => void;
-    setLogInUser: Function;
+    setLogInUser: any;
 }
 
 

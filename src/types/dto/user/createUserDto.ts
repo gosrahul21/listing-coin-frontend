@@ -1,4 +1,3 @@
-import { UserRoleType } from "../../enums/userRoleType";
 
 
 export interface CompanyDetailsDto {

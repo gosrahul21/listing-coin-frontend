@@ -11,7 +11,7 @@ const InputWithLabel = (props: {
     vertical?: boolean;
     placeholder?: string;
     border?: string;
-    labelStyle?: Object;
+    labelStyle?: any;
 })=>{
     return <div className={`flex ${props.vertical?'flex-col gap-[10px]':'flex-row items-center gap-1 '} w-full`}> 
         <Label value={props.label}  style={props.labelStyle}/>

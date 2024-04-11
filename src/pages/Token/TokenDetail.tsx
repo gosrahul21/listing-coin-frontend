@@ -1,4 +1,4 @@
-import { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getTokenById } from '../../services/tokenService';
 import WebsiteIcon from '../../assets/icons/WebsiteIcon';
@@ -27,7 +27,7 @@ const TokenDetailPage = () => {
                 return;
             setToken(data);
         } catch (error) {
-
+            console.log(error)
         }
     }
     return (

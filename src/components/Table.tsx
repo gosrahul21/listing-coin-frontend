@@ -36,7 +36,7 @@ const TableComponent = ({ tabs, tableData, activeTab, onTabChange, setSelectedRo
         setSelectedRowIndex(null);
         setSelectedRow(null);
     }
-    console.log(activeTab)
+
     return (
         <div className="flex flex-col items-start gap-0 relative">
             {/* Tabs */}

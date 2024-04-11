@@ -1,10 +1,6 @@
-import { CreateUserDto } from "../types/dto/user/createUserDto";
-import { LoginUserDto } from "../types/dto/user/loginUserDto";
 import { RequestType } from "../types/enums/requestType";
-import { apiCaller, instance1, instance3 } from "../utils/axiosInstance";
+import { apiCaller, instance1 } from "../utils/axiosInstance";
 import { ListUserDto } from "../types/dto/user/listUserDto";
-import { UpdateUserStatusDto } from "../types/dto/user/approveuserDto";
-
 
 export const listToken = async (listTokenDto: ListUserDto) => {
     try {

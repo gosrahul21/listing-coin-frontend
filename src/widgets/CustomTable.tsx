@@ -1,7 +1,7 @@
 import SearchButton from "./buttons/SearchButton";
 import { LeftPaginationIcon } from "./icons/LeftPaginationIcon";
 import { RightPaginationIcon } from "./icons/RightPaginationIcon";
-import { useState, useEffect, memo } from 'react'
+import { useState, memo } from 'react'
 
 const CustomTable = ({ border, headers, values, onItemClick, page, totalCount, limit, onClickNext, onClickPrev, searchBox, searchBoxValue, onSearchBoxValueChange }: CustomTableProps) => {
     const [selectedRowIndex, setSelectedRowIndex] = useState<number | null>();

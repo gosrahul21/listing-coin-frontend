@@ -55,7 +55,7 @@ function Chart(props: {
         // let closePrice = 111.26;
 
         // Create an array to store the generated data
-        const data = [];
+        // const data = [];
 
         // Generate 100 data points
         // for (let i = 0; i < 100; i++) {

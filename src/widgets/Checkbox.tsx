@@ -1,7 +1,7 @@
 import '../assets/css/checkbox.css';
 
 
-const Checkbox = ({ title, For, id, checked , variant, onSelect, ...other }: any) => {
+const Checkbox = ({ title, id, checked , variant, onSelect, ...other }: any) => {
   let labelClass = 'text-sm font-lato text-black';
   if (variant === 'boldNormal')
     labelClass = 'text-normal font-bold font-lato  leading-[16px] text-black';

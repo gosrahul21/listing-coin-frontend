@@ -7,9 +7,7 @@ import Button from "../widgets/Button";
 import FeatureNav from "./FeatureNav";
 import primaryLogo from '../assets/images/primary-logo.png'
 
-const Header = (props: {
-    
-}) => {
+const Header = () => {
     const navigate = useNavigate();
     // const location = useLocation()
     const { user, changeRole, selectedRole } = useUserContext();
