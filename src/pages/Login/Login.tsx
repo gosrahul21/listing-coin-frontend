@@ -165,30 +165,29 @@ const Login = ({ type }: any) => {
         return true;
     }
 
-    return (<div className="login-container bg-slate-900">
+    return (<div className="login-container flex p-4 md:p-0 lg:flex-row justify-between flex-col bg-slate-900">
         <div className='login-left-section'>
-            <div className='flex flex-col items-center max-w-[356px] text-gray-100 text-center pb-14'>
-                <img src={primaryLogo} alt='kigentechLogo' />
-                <h1>Register & <br />"Be a Part of the Coinnewgems."</h1>
-                <span>You are just a few steps away from creating your account.</span>
+            <div className='flex flex-col gap-2 items-center max-w-[356px] text-gray-100 text-center pb-8 lg:pb-14 font-arimo '>
+                <img src={primaryLogo} alt='kgentechLogo' />
+                <h1 className='text-[22px] lg:text-[36px]'>Register & <br />"Be a Part of the Coinnewgems."</h1>
+                <span className='text-[16px] lg:text-[20px]'>You are just a few steps away from creating your account.</span>
             </div>
         </div>
-
-        <div className={`login-right-section`}>
-            <div className={`form-container ${SIGNIN ? '' : "scale-95"}`}>
-                <div className='flex items-center justify-between'>
-                    <h1 className={`text-gray-100 font-bold text-4xl text-[44px] text-center font-lato`}>{SIGNIN ? "Login" : "Registration"}</h1>
-                    <div className='flex text-sm font-lato font-bold gap-2'><p className='text-gray-100 '>{SIGNIN ? "Don't Have an Account?" : "Already Have an Account?"}</p> <span onClick={() => SIGNIN ? navigate('/register') : navigate('/login')} className='text-gray-200 cursor-pointer'>{SIGNIN ? "Register" : "Log In"}</span></div>
+        <div className={`flex-[0.6] flex items-center lg:justify-center w-full  login-right-section`}>
+            <div className={`form-container w-full p-4 lg:p-4 ${SIGNIN ? '' : "scale-95"} lg:max-w-[521px]`}>
+                <div className='flex items-center  justify-between'> 
+                    <h1 className={`text-gray-100 font-bold text-xl md:text-2xl lg:text-4xl  text-center font-lato`}>{SIGNIN ? "Login" : "Registration"}</h1>
+                    <div className='flex text-[11px] lg: text-sm font-lato font-bold gap-2'><p className='text-gray-100 '>{SIGNIN ? "Don't Have an Account?" : "Already Have an Account?"}</p> <span onClick={() => SIGNIN ? navigate('/register') : navigate('/login')} className='text-gray-200 cursor-pointer'>{SIGNIN ? "Register" : "Log In"}</span></div>
                 </div>
-                <form onSubmit={signIn} className={`flex gap-4 flex-col items-end min-w-[521px] pt-[43px]`}>
+                <form onSubmit={signIn} className={`flex gap-4 flex-col items-end lg:px-4 pt-[43px]`}>
                     {SIGNIN ? (<>
-                        <InputWithLabel vertical={true} label='Username' value={username} onChange={onUsernameChange} placeholder='Username' type='text' />
+                        <InputWithLabel width='w-auto lg:w-full' vertical={true} label='Username' value={username} onChange={onUsernameChange} placeholder='Username' type='text' />
                         <div className='flex flex-col gap-1 w-full'>
                             <div className='flex justify-between items-center'>
                                 <Label value='Password' />
                                 <span className='text-xs font-lato font-medium cursor-pointer text-gray-300'>Forgot Password</span>
                             </div>
-                            <Input style={'bg-slate-800 text-gray-100 rounded-md'}  value={password} onChange={onPasswordChange} placeholder='password' type='password' />
+                            <Input width='w-auto lg:w-full' style={'bg-slate-800 text-gray-100 rounded-md'}  value={password} onChange={onPasswordChange} placeholder='password' type='password' />
                         </div>
                         <div className={`flex w-full ${error ? 'justify-between' : "justify-end"}`}>
                             {error && <span className='px-2 font-lato font-normal text-sm text-[red]'>Incorrect username or password</span>}
@@ -196,18 +195,18 @@ const Login = ({ type }: any) => {
                         </div>
                     </>) :
                         (<>
-                            <div className='flex w-full min-w-[721px] gap-8'>
+                            <div className='flex flex-col lg:flex-row w-full lg:min-w-[721px] gap-3 lg:gap-8'>
                                 <div className='flex flex-col flex-1 gap-3'>
-                                    <InputWithLabel vertical={true} label='First Name' onChange={(e) => { setFormFieldData('firstName', e.target.value) }} placeholder='First Name' type='text' />
-                                    <InputWithLabel vertical={true} label='Last Name' onChange={(e) => { setFormFieldData('lastName', e.target.value) }} placeholder='Last Name' type='text' />
+                                    <InputWithLabel width='w-auto lg:w-full' vertical={true} label='First Name' onChange={(e) => { setFormFieldData('firstName', e.target.value) }} placeholder='First Name' type='text' />
+                                    <InputWithLabel width='w-auto lg:w-full'  vertical={true} label='Last Name' onChange={(e) => { setFormFieldData('lastName', e.target.value) }} placeholder='Last Name' type='text' />
                                     
                                   
-                                    <InputWithLabel vertical={true} label='Email' onChange={(e) => { setFormFieldData('email', e.target.value) }} placeholder='Email' type='email' />
+                                    <InputWithLabel width='w-auto lg:w-full' vertical={true} label='Email' onChange={(e) => { setFormFieldData('email', e.target.value) }} placeholder='Email' type='email' />
                                 </div>
                                 <div className='flex flex-col flex-1 gap-3'>
-                                    <InputWithLabel vertical={true} label='Username' onChange={(e) => { setFormFieldData('userName', e.target.value) }} placeholder='Username' type='text' />
-                                    <InputWithLabel vertical={true} label='Password' onChange={(e) => { setFormFieldData('password', e.target.value) }} placeholder='Password' type='password' />
-                                    <InputWithLabel vertical={true} label='Confirm Password' onChange={(e) => { setFormFieldData('confirmPassword', e.target.value) }} placeholder='Confirm Password' type='password' />
+                                    <InputWithLabel width='w-auto lg:w-full' vertical={true} label='Username' onChange={(e) => { setFormFieldData('userName', e.target.value) }} placeholder='Username' type='text' />
+                                    <InputWithLabel width='w-auto lg:w-full' vertical={true} label='Password' onChange={(e) => { setFormFieldData('password', e.target.value) }} placeholder='Password' type='password' />
+                                    <InputWithLabel width='w-auto lg:w-full' vertical={true} label='Confirm Password' onChange={(e) => { setFormFieldData('confirmPassword', e.target.value) }} placeholder='Confirm Password' type='password' />
                                 </div>
                             </div>
 

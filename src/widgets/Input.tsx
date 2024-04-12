@@ -18,7 +18,7 @@ const Input = (props: {
     return (
         <input
             name={props.name}
-            className={`${props.background ? props.background : 'bg-slate-800'} ${props.style} ${props.borderRadius ? props.borderRadius : 'rounded-r-[5px]'} h-10 text-base font-lato font-medium  px-[10px] ${props.width || "w-full"} ${props.border ? props.border : 'border-none'} ${props.borderSize ? `border-[${props.borderSize}]` : ''} ${props.disableFocusBorder ?? false ? "focus:outline-none" : ""}`}
+            className={`${props.background ? props.background : 'bg-slate-800'} ${props.style} ${props.borderRadius ? props.borderRadius : 'rounded-r-[5px]'} h-8 lg:h-10 text-sm md:text-base font-lato font-medium  px-[10px] ${props.width || "w-full"} ${props.border ? props.border : 'border-none'} ${props.borderSize ? `border-[${props.borderSize}]` : ''} ${props.disableFocusBorder ?? false ? "focus:outline-none" : ""}`}
             placeholder={props.placeholder}
             type={props.type}
             value={props.value}

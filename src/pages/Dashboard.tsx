@@ -79,15 +79,15 @@ const User = () => {
 
 
   return (<Layout>
-    <div className="flex flex-col gap-8 py-8 px-40 basis-0 flex-grow flex-shrink-0">
-      <div className="grid grid-cols-4   rounded-2xl  shadow-sm">
+    <div className="flex flex-col gap-8 py-8 px-1 sm:px-2 md:px-5 lg:px-40 basis-0 flex-grow flex-shrink-0">
+      <div className="grid grid-cols-1 gap-4 md:gap-0 md:grid-cols-4 rounded-2xl  shadow-sm">
         {[1, 2, 3, 4].map(() => <div className="h-full rounded-md m-2">
           <img className="h-full rounded-xl" src="https://coinsgem.com/_next/image?url=https%3A%2F%2Fcdn.coinsgem.com%2Fbanners%2Ff4fb5e3d40-ezgif-2-ea746f8d8c.gif&w=768&q=75" />
         </div>)}
       </div>
 
       <div className="flex flex-col border border-yellow-400 rounded-xl bg basis-0">
-        <img className="object-contain w-full h-full shadow rounded-xl" src="https://coinsgem.com/_next/image?url=https%3A%2F%2Fcdn.coinsgem.com%2Fbanners%2F1216f7cc5d4-2.gif&w=1024&q=75" />
+        <img className="object-cover lg:object-contain w-full h-full shadow rounded-xl" src="https://coinsgem.com/_next/image?url=https%3A%2F%2Fcdn.coinsgem.com%2Fbanners%2F1216f7cc5d4-2.gif&w=1024&q=75" />
       </div>
 
       {/* Promote coin Table */}

@@ -11,11 +11,12 @@ const InputWithLabel = (props: {
     vertical?: boolean;
     placeholder?: string;
     border?: string;
+    width?:string;
     labelStyle?: any;
 })=>{
     return <div className={`flex ${props.vertical?'flex-col gap-[10px]':'flex-row items-center gap-1 '} w-full`}> 
         <Label value={props.label}  style={props.labelStyle}/>
-       <Input value={props.value} onChange={props.onChange} type={props.type} style={'bg-slate-800 text-gray-100 rounded-md'} placeholder={props.placeholder} border={props.border} />
+       <Input value={props.value} width={props.width} onChange={props.onChange} type={props.type} style={'bg-slate-800 text-gray-100 rounded-md'} placeholder={props.placeholder} border={props.border} />
     </div>
 };
 

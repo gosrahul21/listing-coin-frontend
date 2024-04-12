@@ -6,6 +6,7 @@ const Button = (props: {
     name: string;
     disabled?: boolean
     height?: string;
+    className?: string;
 }) => {
     let className = '';
     if (props.variant === 'primary') {
@@ -20,7 +21,7 @@ const Button = (props: {
         className = ' text-gray-800 border border-[#00000] z-[1]'
     }
     return (
-        <button type={props.type} name={props.name} onClick={props.onClick} className={`${className} py-2 px-6  flex items-center rounded-[10px]  font-lato font-semibold text-sm active:scale-95 duration-300 ${props.disabled ? 'opacity-80' : 'cursor-pointer'}`} disabled={props.disabled}>
+        <button type={props.type} name={props.name} onClick={props.onClick} className={`${className} py-1 md:p-2 px-3 md:px-6  flex items-center rounded-[10px]  font-lato font-semibold text-sm active:scale-95 duration-300 ${props.disabled ? 'opacity-80' : 'cursor-pointer'} ${props.className}`} disabled={props.disabled}>
             {props.name}
         </button>
     );

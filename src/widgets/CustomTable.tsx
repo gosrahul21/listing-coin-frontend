@@ -21,9 +21,10 @@ const CustomTable = ({ border, headers, values, onItemClick, page, totalCount, l
         onClickPrev();
         setSelectedRowIndex(null);
     }
-    return <><table className={`w-full ${border || "rounded-2xl border-separate"} overflow-hidden border border-yellow-500 border-spacing-0`}>
+    return <div className="w-full overflow-x-auto">
+        <table className={`w-full ${border || "rounded-2xl border-separate"}  border border-yellow-500 border-spacing-0`}>
         {/* Table Header */}
-        <thead className="bg-yellow-500  font-plusJakartaSans font-bold text-base">
+        <thead className="bg-yellow-500  font-plusJakartaSans font-bold text-[11px] md:text-base">
             <tr className=''>
                 {
                     headers?.map((header: string, index: any) => <th className={`py-[14px] px-5 leading-[22px] ${!border && headers.length - 1 === index && 'rounded-tr-2xl'}`}>{header}</th>)
@@ -31,7 +32,7 @@ const CustomTable = ({ border, headers, values, onItemClick, page, totalCount, l
             </tr>
         </thead>
         {/* Table Body */}
-        <tbody className="w-full">
+        <tbody className="w-full text-[11px] md:text-base">
 
             {searchBox && <tr>
                 <td colSpan={6}>
@@ -63,7 +64,7 @@ const CustomTable = ({ border, headers, values, onItemClick, page, totalCount, l
             </div>
 
         </div> : <></>}
-    </>
+    </div>
 }
 
 export type CustomTableProps = {

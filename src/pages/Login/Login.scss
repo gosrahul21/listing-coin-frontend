@@ -1,8 +1,5 @@
 .login-container {
     // background: url('../../assets/images/kigentech-bg.png');
-    background-position: right;
-    background-repeat: repeat-y;
-    background-size: cover;
     min-height: 100vh;
     /* 100% of the viewport height */
     display: flex;
@@ -24,7 +21,6 @@
         h1 {
             // Register & <br/>"Be a Part of the Kigentech."
             color: #ece6df;
-            font-size: 36px;
             font-family: Arimo;
             font-weight: 400;
             // word-wrap: break-word;
@@ -34,7 +30,6 @@
         span {
             // You are just a few steps away from creating your account.
             color: #ece6df;
-            font-size: 20px;
             font-family: Arimo;
             font-weight: 400;
             line-height: 25.20px;
@@ -43,15 +38,12 @@
     }
 
     .login-right-section {
-        flex: 0.6;
-        display: flex;
-        justify-content: center;
+
     }
 
     .form-container {
         background: #24242ab4;
         border-radius: 21px;
-        padding: 30px 43px;
         font-family: lato;
 
         .form-header {

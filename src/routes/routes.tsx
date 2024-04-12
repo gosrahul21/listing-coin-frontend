@@ -35,7 +35,12 @@ const landingRoutes: Route[] = [
         path: '/promote',
         exact: true,
         component: <PromoteCoinsPage/>,
-    }
+    },
+    {
+        path: '*',
+        exact: true,
+        component: <User />
+    },
 ]
 
 const userRoutes: Route[] = [
@@ -43,11 +48,6 @@ const userRoutes: Route[] = [
 ]
 
 const guestRoutes: Route[] = [
-    {
-        path: '/',
-        exact: true,
-        component: <Login type='login' />
-    },
     {
         path: '/login',
         exact: true,

@@ -20,11 +20,11 @@ const Header = () => {
         }
     }, [selectedRole]);
 
-    return (<div className="flex h-[99px] bg-slate-800 z-10 items-center gap-6 pr-11 px-5 sticky top-0 ">
+    return (<div className="flex h-fit lg:h-[99px] bg-slate-800 z-10 items-center lg:gap-6 pr-11 px-5 sticky top-0 ">
         <div className="flex-1">
-            <img onClick={()=>navigate('/dashboard')} src={primaryLogo} className="w-[97px] h-[83px] object-fill cursor-pointer" alt='coin100x' />
+            <img onClick={()=>navigate('/dashboard')} src={primaryLogo} className="w-[40px] h-[40px] lg:w-[97px] lg:h-[83px] object-fill cursor-pointer" alt='coin100x' />
         </div>
-        <form id="searchForm" className="flex focus:ring-gray-400 bg-slate-700 rounded-2xl w-1/5">
+        <form id="searchForm" className="flex focus:ring-gray-400 hidden md:flex bg-slate-700 rounded-2xl w-1/5">
             <button type="submit" className="flex items-center py-2 px-4 bg-transparent text-white">
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2M15 9a6 6 0 11-12 0 6 6 0 0112 0z"></path>
@@ -34,7 +34,7 @@ const Header = () => {
 
         </form>
 
-        <Button name="ADD your coin" onClick={() => { navigate('/token/add') }} variant="primary" />
+        <Button className="hidden lg:block" name="ADD your coin" onClick={() => { navigate('/token/add') }} variant="primary" />
        <RoleDropdown value={{ user: user, selectedRole: selectedRole! }} onSelect={(role: UserType) => { changeRole(role) }} items={["My Coins","Orders","My Profile","Settings", "Logout"]} />
         <FeatureNav/>
     </div>)

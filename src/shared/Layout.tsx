@@ -1,11 +1,11 @@
 import Header from "../components/Header";
 import primaryLogo from '../assets/images/primary-logo.png'
 export default function Layout({ children }: any) {
-    return <div className="flex flex-col bg-slate-900">
-        <Header  />
-        {children}
-        <footer className="bg-gray-800 px-4 text-white py-8">
-      <div className="container mx-auto flex justify-between px-4 gap-10">
+  return <div className="flex flex-col bg-slate-900">
+    <Header />
+    {children}
+    <footer className="bg-gray-800 px-4 text-white py-8">
+      <div className="container mx-auto flex flex-col lg:flex-row justify-between px-4 gap-10">
         <div className="flex-1">
           <img src={primaryLogo} alt="Logo" className="h-12 mb-4 bg-none" />
           <p className="text-sm w-3/4">The best cryptocurrency token voting service to find new gem coins. Research over 90,000 coins verified with honeypot, rug pull and all market data including token prices, market cap, liquidity and holder data. Find out popular presale & fair launch tokens. Explore, buy and earn. CoinsGem - Find your 100x gem!</p>
@@ -42,5 +42,5 @@ export default function Layout({ children }: any) {
         <p className="text-xs">&copy; 2021-2024 © CoinsGEM - Best New Crypto Tokens & Coins</p>
       </div>
     </footer>
-    </div>
+  </div>
 }
