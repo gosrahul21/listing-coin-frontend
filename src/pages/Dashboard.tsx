@@ -100,10 +100,10 @@ const User = () => {
         {/* Tabs */}
         {/* <Tabs activeTab={activeTab} onTabChange={onTabChange} tabs={tabs} /> */}
         <div className="flex justify-between w-full">
-          <h3 className="text-yellow-400 text-2xl font-semibold leading-1">
+          <h3 className="text-yellow-400 text-xl lg:text-2xl font-semibold leading-1">
             Promoted Spot
           </h3>
-          <Button name="promote your coin" onClick={() => { navigate("/promote") }} variant="primary" />
+          <Button className="text-sm md:text-lg" name="promote your coin" onClick={() => { navigate("/promote") }} variant="primary" />
         </div>
 
         {/* Table */}
@@ -135,10 +135,10 @@ const User = () => {
 
         {/* Table */}
         <div className="flex justify-between w-full">
-          <h3 className="text-yellow-400 text-2xl font-semibold leading-1">
+          <h3 className="text-yellow-400 text-xl lg:text-2xl font-semibold leading-1">
             All Time Top
           </h3>
-          <Button name="add your coin" onClick={() => { navigate('/token/add') }} variant="primary" />
+          <Button className="text-sm md:text-lg" name="add your coin" onClick={() => { navigate('/token/add') }} variant="primary" />
         </div>
 
         {loading && (

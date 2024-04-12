@@ -35,7 +35,7 @@ const RoleDropdown = ({ value, onSelect, items }: { value: any, onSelect: (item:
                 </> : <span onClick={(e)=>{
                     e.stopPropagation();
                     navigate('/login')
-                }} className="font-semibold text-base py-2 px-4">Login</span>
+                }} className="font-semibold text-base  md:py-2 px-4">Login</span>
             }
         </div>
         <div className={`${value.user?'':"hidden"}`}>

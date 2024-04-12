@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import Layout from "../../shared/Layout";
 
 
 const PromoteCoinsPage = () => {
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
   return (
     <Layout>
       <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">

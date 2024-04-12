@@ -17,6 +17,7 @@ const TokenDetailPage = () => {
     useEffect(() => {
         if (!tokenId)
             return;
+        window.scrollTo(0, 0);
         fetchTokenDetails(tokenId);
     }, [tokenId]);
 
@@ -32,14 +33,17 @@ const TokenDetailPage = () => {
     }
     return (
         <Layout>
-            <div className="text-gray-100 px-10 py-4">
+            <div className="text-gray-100 px-4 md:px-10 py-4">
                 <div className="mb-4 ">
-                    <div className="flex items-center mb-6 gap-2 py-2">
-                        <img src={token?.logoUrl} alt={`${token?.name} Logo`} className="w-12 h-12 mr-4" />
-                        <div>
-                            <h1 className="text-3xl font-bold">{token?.name} ({token?.symbol})</h1>
+                    <div className="flex flex-col items-start md:flex-row md:items-center mb-6 gap-2 py-2">
+                        <div className='flex items-center'>
+                            <img src={token?.logoUrl} alt={`${token?.name} Logo`} className="w-12 h-12 mr-4" />
+                            <div>
+                                <h1 className="text-3xl font-bold">{token?.name} ({token?.symbol})</h1>
+                            </div>
                         </div>
-                        <div className='flex gap-2 items-center text-gray-300'>
+
+                        <div className='flex gap-2 items-center text-sm md:text-base text-gray-300'>
                             <p>{token?.tokenAddress}</p>
                             <FaCopy onClick={() => copyToClipboard(token?.tokenAddress, () => {
                                 toast("wallet address copied to clipboard.", {
@@ -59,7 +63,7 @@ const TokenDetailPage = () => {
                 <div className="mb-4 ">
                     <div className="flex gap-2 items-center">
                         <div className="cursor-pointer">
-                            <WebsiteIcon />
+                            <WebsiteIcon color="white" />
                         </div>
                         <div className="cursor-pointer">
                             <InstagramIcon />
