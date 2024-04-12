@@ -6,6 +6,7 @@ import Button from "../widgets/Button";
 import Layout from "../shared/Layout";
 import { getTokenPriceById, listToken } from "../services/tokenService";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const CustomTable = React.lazy(() => import("../widgets/CustomTable"));
 
@@ -55,7 +56,7 @@ const User = () => {
       headers: ["name", "chain", "1h%", "24h%", "Market Cap", "volume", "Launch", "Votes"],
       // name chain 1h% 24h% marketcap volume Launch Votes
       values: tokens?.map((coin: any) => [
-        <div className="flex items-center gap-4"><img className="h-16 rounded-full" src={coin.logoUrl ? coin.logoUrl : "https://cdn.coinsgem.com/coins/100x100/0xc93B7e6d6445f8e7de92abDDbFBC8057CdCaA1a6.png"} />{coin.name}</div>,
+        <div className="flex items-center gap-2 lg:gap-4 text-sm lg:text-base w-full"><img className="h-8 md:h-16 rounded-full" src={coin.logoUrl ? coin.logoUrl : "https://cdn.coinsgem.com/coins/100x100/0xc93B7e6d6445f8e7de92abDDbFBC8057CdCaA1a6.png"} />{coin.name}</div>,
         coin.chainId.name,
         <div className={`${coin.oneHrChange < 0 ? "text-red-400" : "text-green-400"}`}>
           {coin.oneHrChange ? `${coin.oneHrChange.toFixed(2)}%` : ''}
@@ -67,7 +68,11 @@ const User = () => {
         coin.marketCap,
         coin.volume,
         coin.launchDate ? new Date(coin.launchDate).toLocaleDateString() : 'NA',
-        <div className=" flex items-center gap-4 justify-center">{coin.votes}<Button name="Vote" variant="secondary" onClick={(e: any) => { e.stopPropagation() }} /></div>,
+        <div className=" flex items-center gap-4 justify-center">{coin.votes}<Button name="Vote" variant="secondary" onClick={(e: any) => {
+          e.stopPropagation(); toast('Please login to vote', {
+            type: "warning",
+          })
+        }} /></div>,
         coin._id,
       ]),
       // limit: userListData.limit,
@@ -133,7 +138,7 @@ const User = () => {
           <h3 className="text-yellow-400 text-2xl font-semibold leading-1">
             All Time Top
           </h3>
-          <Button name="add your coin" onClick={() => { navigate('/token/add')}} variant="primary" />
+          <Button name="add your coin" onClick={() => { navigate('/token/add') }} variant="primary" />
         </div>
 
         {loading && (

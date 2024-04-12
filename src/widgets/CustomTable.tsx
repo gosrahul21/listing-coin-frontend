@@ -21,10 +21,10 @@ const CustomTable = ({ border, headers, values, onItemClick, page, totalCount, l
         onClickPrev();
         setSelectedRowIndex(null);
     }
-    return <div className="w-full overflow-x-auto">
-        <table className={`w-full ${border || "rounded-2xl border-separate"}  border border-yellow-500 border-spacing-0`}>
+    return <div className="w-full ">
+        <table className={`w-full block md:table overflow-x-auto  ${border || "rounded-2xl border-separate"}  border border-yellow-500 border-spacing-0`}>
         {/* Table Header */}
-        <thead className="bg-yellow-500  font-plusJakartaSans font-bold text-[11px] md:text-base">
+        <thead className="bg-yellow-500  font-plusJakartaSans font-bold text-[11px] md:text-base w-full">
             <tr className=''>
                 {
                     headers?.map((header: string, index: any) => <th className={`py-[14px] px-5 leading-[22px] ${!border && headers.length - 1 === index && 'rounded-tr-2xl'}`}>{header}</th>)
@@ -48,7 +48,7 @@ const CustomTable = ({ border, headers, values, onItemClick, page, totalCount, l
                     {rowValues.map((value: any, valueIndex) => {
                         if(valueIndex===headers.length)
                             return null;
-                        return <td className={`shadow-lg py-[14px] border border-x-0 border-slate-800 ${valueIndex === 0 && 'border-l-[0.5px]'}   leading-[22px] px-5 ${values.length === (index + 1) && valueIndex === 0 ? 'rounded-bl-2xl' : ''}  ${values.length === (index + 1) && rowValues.length - 1 === valueIndex ? 'rounded-br-2xl' : ''}`}>{value}</td>
+                        return <td className={`shadow-lg py-[14px] w-fit text-sm md:text-base border border-x-0 border-slate-800 ${valueIndex === 0 && 'border-l-[0.5px]'} whitespace-nowrap leading-[22px] px-5 ${values.length === (index + 1) && valueIndex === 0 ? 'rounded-bl-2xl' : ''}  ${values.length === (index + 1) && rowValues.length - 1 === valueIndex ? 'rounded-br-2xl' : ''}`}>{value}</td>
                     })}
                 </tr>
             ))}
